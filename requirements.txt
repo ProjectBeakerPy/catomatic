@@ -1,4 +1,5 @@
 python-dotenv
+gunicorn 
 flask
 flask-wtf
 flask-sqlalchemy
