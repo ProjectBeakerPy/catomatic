@@ -3,6 +3,10 @@ from werkzeug.urls import url_parse
 from app.forms import FeedForm
 from app import app
 
+import RPi.GPIO as GPIO
+import time
+import sys
+
 @app.route('/', methods=['GET','POST'])
 @app.route('/index', methods=['GET','POST'])
 def index():
