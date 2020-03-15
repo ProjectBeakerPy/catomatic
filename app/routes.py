@@ -15,7 +15,7 @@ def index():
   form = FeedForm() 
   if form.validate_on_submit():
       def dynamic_page():
-        return petfeeder.feed(3)
+        return petfeeder.feed() 3
   return render_template('index.html', title='Cat-o-matic', username=username, form=form )
 
   # @app.route('/feed', methods=['POST'])

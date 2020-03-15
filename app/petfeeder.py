@@ -5,11 +5,11 @@ import time
 import sys
 
 
-def feed():
+def feed(arg1):
     # let the GPIO library know where we've connected our servo to the Pi
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(12, GPIO.OUT)
-    attempts = int(sys.argv[1])
+    attempts = arg1
 
     try:
         servo = GPIO.PWM(12, 50)
