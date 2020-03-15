@@ -2,6 +2,7 @@ from flask import render_template, flash, redirect, url_for, request, jsonify, m
 from werkzeug.urls import url_parse
 from app.forms import FeedForm
 from app import app
+from app import petfeeder
 
 
 @app.route('/', methods=['GET','POST'])
