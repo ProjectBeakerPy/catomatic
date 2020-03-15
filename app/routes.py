@@ -2,6 +2,8 @@ from flask import render_template, flash, redirect, url_for, request, jsonify, m
 from werkzeug.urls import url_parse
 from app.forms import FeedForm
 from app import app
+from app import petfeeder
+
 
 @app.route('/', methods=['GET','POST'])
 @app.route('/index', methods=['GET','POST'])
@@ -13,7 +15,7 @@ def index():
   # app.logger.critical('this is a CRITICAL message')
   form = FeedForm() 
   if form.validate_on_submit():
-      app.logger.info('this is in the form submit')
+    petfeeder.feed(3)
   return render_template('index.html', title='Cat-o-matic', username=username, form=form )
 
   # @app.route('/feed', methods=['POST'])
