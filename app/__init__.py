@@ -9,3 +9,4 @@ app.config.from_object(Config)
 app.logger.setLevel(logging.INFO)
 
 from app import routes
+from app import petfeeder
