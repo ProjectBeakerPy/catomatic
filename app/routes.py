@@ -15,7 +15,7 @@ def index():
   # app.logger.critical('this is a CRITICAL message')
   form = FeedForm() 
   if form.validate_on_submit():
-    petfeeder.feed(3)
+    petfeeder.feed(1)
   return render_template('index.html', title='Cat-o-matic', username=username, form=form )
 
   # @app.route('/feed', methods=['POST'])
